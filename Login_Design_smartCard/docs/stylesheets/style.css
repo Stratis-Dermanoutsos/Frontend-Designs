@@ -1,0 +1,82 @@
+.light-bg {
+    background-color: #47D0BE;
+}
+
+form {
+    background-color: #1F4864;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.6);
+    height: 725px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    text-align: center;
+}
+
+table {
+    margin-left: 10%;
+    margin-top: 57.5%;
+    width: 80%;
+    margin-bottom: 180px;
+}
+
+label {
+    position: relative;
+}
+
+label::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+}
+
+#l-user::before {
+    background: url("../images/user.svg") center / contain no-repeat;
+}
+
+#l-pass::before {
+    background: url("../images/pass.svg") center / contain no-repeat;
+}
+
+input {
+    border: 0;
+    border-radius: 4px;
+    color: white;
+    display: inline-block;
+    font-size: x-large;
+    font-weight: bold;
+    height: 55px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+input::placeholder {
+    color: #B4B4B4;
+}
+
+.text-in {
+    background-color: #0E2D3F;
+    font-size: medium;
+    font-weight: normal;
+    height: 55px;
+    padding-left: 60px;
+    width: calc(100% - 60px);
+}
+
+#sub {
+    box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.4);
+}
+
+#sub:hover {
+    cursor: pointer;
+}
+
+a {
+    color: #627C8C;
+    font-size: 20px;
+    text-decoration: none;
+}
