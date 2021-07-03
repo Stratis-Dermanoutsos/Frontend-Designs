@@ -1,0 +1,98 @@
+body {
+    background-color: #364761;
+}
+
+form {
+    background-color: #192133;
+    height: 650px;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+}
+
+table {
+    height: fit-content;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 240px);
+    width: fit-content;
+}
+
+input {
+    border: none;
+    border-radius: 4px;
+    height: 40px;
+    margin-bottom: 15px;
+    width: 300px;
+}
+
+.text-in {
+    background-color: #1E293A;
+    padding-left: 15px;
+}
+
+.text-in::placeholder {
+    color: #7D848D;
+}
+
+#sub {
+    background-color: #F30024;
+    color: #B7BDC8;
+    height: 43px;
+    width: 318px;
+}
+
+#socials {
+    bottom: 125px;
+    color: #B7BDC8;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 318px;
+}
+
+#socials #buttons {
+    display: inline-flex;
+    width: 100%;
+}
+
+#socials button {
+    border: none;
+    border-radius: 4px;
+    display: block;
+    height: 42px;
+    padding-top: 2px;
+    width: 148px;
+}
+
+#socials button:hover {
+    cursor: pointer;
+}
+
+#facebook {
+    background-color: #41599C;
+    margin-right: 11px;
+}
+
+#twitter {
+    background-color: #65ACF1;
+    margin-left: 11px;
+}
+
+#end {
+    bottom: 30px;
+    position: absolute;
+    width: 100%;
+}
+
+a {
+    color: #F30024;
+    text-decoration: none;
+}
+
+#signup {
+    color: #687079;
+}
