@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700;900&display=swap');
+
+@function hex_to_rgb($hex) {
+    @return "rgb("+red($hex)+","+green($hex)+","+blue($hex)+")";
+}
+
+@mixin center_horizontal() {
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+/* Resolutions */
+$breakpoint_tablet: 768px;
+$breakpoint_desktop: 992px;
+
+/* Colors */
+$primary: #449342;
+$secondary: #2EAF7D;
+$accent_dark: #02353C;
+$text_bg: #C1F6ED;
+$highlight: #3FD0C9;
+$background_light: rgba(255, 255, 255, .08);
+$background_dark: rgba(255, 255, 255, .15);
+
+/* SVGs */
+$hide_password: url('data:image/svg+xml;utf8,<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#{hex_to_rgb($accent_dark)}" fill-rule="evenodd" clip-rule="evenodd"><path d="M4.811 4l13.186 15.714-1.521 1.286-5.046-6h-2.43l-1.506-1.503-1.494 1.503-1.48-1.503-1.52 1.503-3-3.032 2.53-2.968h3.866l-3.117-3.714 1.532-1.286zm6.156 5h1.837c1.038-1.793 2.977-3 5.196-3 3.311 0 6 2.689 6 6 0 3.143-2.421 5.724-5.498 5.979l-7.535-8.979zm9.533 1.5c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5z"/></svg>');
+$show_password: url('data:image/svg+xml;utf8,<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#{hex_to_rgb($accent_dark)}" fill-rule="evenodd" clip-rule="evenodd"><path d="M12.804 9c1.038-1.793 2.977-3 5.196-3 3.311 0 6 2.689 6 6s-2.689 6-6 6c-2.219 0-4.158-1.207-5.196-3h-3.804l-1.506-1.503-1.494 1.503-1.48-1.503-1.52 1.503-3-3.032 2.53-2.968h10.274zm7.696 1.5c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5z"/></svg>');
+
+html, body {
+    background: linear-gradient(135deg, $accent_dark 0%, $secondary 100%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+img {
+    @include center_horizontal();
+    height: 15vh;
+    top: 12.5vh;
+}
+
+form {
+    align-items: center;
+    background-color: $background_dark;
+    box-shadow: 0px 10px 15px 2px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    margin: 40vh 0;
+    width: 100%;
+
+    #password {
+        position: relative;
+
+        input {
+            &[type=checkbox] {
+                background: $hide_password no-repeat center;
+                bottom: 0;
+                height: 1.6rem;
+                position: absolute;
+                right: .5rem;
+                top: 0;
+                width: 1.6rem;
+                -webkit-appearance: none;
+
+                &:checked {
+                    background: $show_password no-repeat center;
+                }
+            }
+
+            &[type=password], &[type=text] {
+                padding-right: 3rem;
+                width: 13.5rem;
+            }
+        }
+    }
+
+    input {
+        background-color: $text_bg;
+        border: none;
+        border-radius: 5px;
+        color: $accent_dark;
+        font-family: inherit;
+        margin: .7rem 0;
+        min-height: 2rem;
+        padding-left: 1rem;
+        width: 16.5rem;
+
+        &[type=submit] {
+            background: linear-gradient(135deg, $highlight 0%, $secondary 100%);
+            color: $accent_dark;
+            cursor: pointer;
+            font-size: 1.2rem;
+            width: 17.5rem;
+            
+            &:hover {
+                background: linear-gradient(135deg, $accent_dark 0%, $primary 100%);
+                color: $text_bg;
+                box-shadow: .5px 2px 5px rgba(0, 0, 0, 0.4);
+            }
+        }
+    }
+
+    #rememberme {
+        display: block;
+        line-height: 1.5rem;
+        margin-top: -.3rem;
+        position: relative;
+        width: 17.5rem;
+
+        input {
+            box-shadow: .5px 2px 5px rgba(0, 0, 0, 0.4);
+            margin: 0 .5rem 0 0;
+            padding: 0;
+            width: 2rem;
+            vertical-align: bottom;
+            // https://dev.to/proticm/styling-html-checkboxes-is-super-easy-302o
+            appearance: none;
+            background: linear-gradient(135deg, $highlight 0%, $secondary 100%);
+            border-radius: 100%;
+            outline: none;
+            transform: scale(.8);
+            -moz-appearance: none;
+            -o-appearance: none;
+            -webkit-appearance: none;
+            
+            &:checked {
+                background: linear-gradient(135deg, $accent_dark 0%, $primary 100%);
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        span {
+            color: $text_bg;
+            position: relative;
+            top: -.2rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        input:checked + span::before {
+            content: '\2713';
+            display: block;
+            text-align: center;
+            color: $text_bg;
+            position: absolute;
+            left: -1.9rem;
+            top: -.1rem;
+        }
+    }
+
+    #forgotpassword {
+        margin: 0 0 .7rem 0;
+        text-align: right;
+        width: 17.5rem;
+
+        a {
+            color: $text_bg;
+            text-decoration: none;
+
+            &:hover {
+                color: $highlight;
+            }
+        }
+    }
+}
+
+@media (min-width: $breakpoint_tablet) {
+    html, body {
+        background: linear-gradient(90deg, $accent_dark 0%, $secondary 100%);
+        font-size: 18px;
+    }
+
+    form {
+        @include center_horizontal();
+        background-color: $background_light;
+        border-radius: 10px;
+        margin: 20rem 0;
+        width: 500px;
+
+        #password {
+            input {
+                &[type=password], &[type=text] {
+                    width: 13.5rem;
+                }
+            }
+        }
+
+        input {
+            margin: .7rem 0;
+            min-height: 2rem;
+            width: 16.5rem;
+        }
+    }
+}
+
+@media (min-width: $breakpoint_desktop) {
+    html, body {
+        background: linear-gradient(45deg, $accent_dark 0%, $secondary 100%);
+        font-size: 16px;
+    }
+
+    form {
+        border-radius: 15px;
+        width: 650px;
+
+        #password {
+            button {
+                height: 2rem;
+                width: 2rem;
+            }
+            
+            input {
+                &[type=password], &[type=text] {
+                    width: 17rem;
+                }
+            }
+        }
+
+        input {
+            min-height: 2.4rem;
+            width: 20rem;
+
+            &[type=submit] {
+                width: 21rem;
+            }
+        }
+
+        #rememberme {
+            display: block;
+            line-height: 1.5rem;
+            position: relative;
+            width: 21rem;
+
+            input {
+                width: 2.3rem;
+            }
+
+            span {
+                top: -.4rem;
+            }
+
+            input:checked + span::before {
+                left: -2rem;
+                top: 0;
+            }
+        }
+
+        #forgotpassword {
+            margin: 0 0 .5rem 0;
+            width: 21rem;
+        }
+    }
+}
