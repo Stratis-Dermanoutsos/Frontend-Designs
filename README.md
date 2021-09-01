@@ -15,3 +15,5 @@ This repository is meant to hold designs that I create or I find pictures of and
 [CSS_art_desk](./CSS_art_desk)
 
 [Login_Design_Original_1](./Login_Design_Original_1)
+
+[LandingPage_Design_Original_1](./LandingPage_Design_Original_1)

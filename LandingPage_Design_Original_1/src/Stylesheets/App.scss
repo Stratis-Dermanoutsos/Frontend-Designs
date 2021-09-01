@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700;900&display=swap');
+
+/* colors */
+$primary: #FEFEFE;
+$secondary: #363636;
+$accent-p: #3AEBEF;
+$accent-s: #0996AA;
+
+
+body, html {
+    background-color: $primary;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+
+    .App {
+        .BodyContainer {
+            background-color: $accent-p;
+            color: $primary;
+            height: 60vh;
+            width: 100vw;
+        }
+
+        .Form {
+            form {
+                background-color: $primary;
+                height: 35vh;
+                min-height: 270px;
+                transform: translateY(-64px) !important;
+            }
+        }
+
+        .Silhouette {
+            transform: translate(128px, 128px) !important;
+
+            img {
+                height: auto;
+                min-width: 300px;
+                width: 40vw;
+            }
+        }
+    }
+}
+
+// If <= 992px (lg)
+@media screen and (max-width: 992px) {
+    body, html {
+        .App {
+            .BodyContainer p, .Silhouette {
+                visibility: hidden;
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700;900&display=swap");
+/* colors */
+body, html {
+  background-color: #FEFEFE;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+body .App .BodyContainer, html .App .BodyContainer {
+  background-color: #3AEBEF;
+  color: #FEFEFE;
+  height: 60vh;
+  width: 100vw;
+}
+
+body .App .Form form, html .App .Form form {
+  background-color: #FEFEFE;
+  height: 35vh;
+  min-height: 270px;
+  -webkit-transform: translateY(-64px) !important;
+          transform: translateY(-64px) !important;
+}
+
+body .App .Silhouette, html .App .Silhouette {
+  -webkit-transform: translate(128px, 128px) !important;
+          transform: translate(128px, 128px) !important;
+}
+
+body .App .Silhouette img, html .App .Silhouette img {
+  height: auto;
+  min-width: 300px;
+  width: 40vw;
+}
+
+@media screen and (max-width: 992px) {
+  body .App .BodyContainer p, body .App .Silhouette, html .App .BodyContainer p, html .App .Silhouette {
+    visibility: hidden;
+  }
+}
+/*# sourceMappingURL=App.css.map */
