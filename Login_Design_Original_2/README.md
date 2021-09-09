@@ -17,6 +17,4 @@ If any problem occures
 
 ## Showcase
 
-- Desktop
-
-    ![showcase](./Screenshot_1.png)
+![showcase](./Screenshot_1.png)
