@@ -1,0 +1,10 @@
+.nav-link:hover {
+  color: white !important;
+  background-color: red !important;
+}
+
+.active {
+  color: white !important;
+  background-color: red !important;
+}
+/*# sourceMappingURL=Navbar.css.map */

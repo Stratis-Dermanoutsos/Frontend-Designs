@@ -1,0 +1,63 @@
+#about-us {
+    .custom-shape-divider-bottom-1631782890 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+        z-index: -1;
+
+        svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 50vh;
+            transform: rotateY(180deg);
+        }
+
+        .shape-fill {
+            fill: red;
+        }
+    }
+
+    img {
+        height: auto;
+        width: 20vw;
+        max-width: 200px;
+        min-width: 128px;
+    }
+
+    .social {
+        color: #fff;
+        height: fit-content;
+        width: fit-content;
+
+        &:hover {
+            background-color: #fff;
+            border-bottom: 10px solid #fff;
+            border-top: 10px solid #fff;
+            border-radius: 25px;
+            color: #000;
+        }
+
+        svg {
+            fill: currentColor;
+            height: 64px;
+            width: 64px;
+        }
+    }
+}
+
+// screen.width <= 768px || 'md' in bootstrap's breakpoints
+@media screen and (max-width: 768px) {
+    #about-us {
+        .social{
+            svg {
+                height: 48px;
+            width: 48px;
+            }
+        }
+    }
+}

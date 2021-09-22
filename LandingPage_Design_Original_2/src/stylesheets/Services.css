@@ -1,0 +1,39 @@
+#services .custom-shape-divider-top-1631786251 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: -1;
+}
+
+#services .custom-shape-divider-top-1631786251 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 50vh;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+#services .custom-shape-divider-top-1631786251 .shape-fill {
+  fill: red;
+}
+
+#services .serviceContainer {
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+}
+
+#services .serviceCard {
+  height: 300px !important;
+  width: 330px !important;
+}
+
+#services .serviceCard .card {
+  height: 300px !important;
+  width: 330px !important;
+}
+/*# sourceMappingURL=Services.css.map */

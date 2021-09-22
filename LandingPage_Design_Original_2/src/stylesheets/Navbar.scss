@@ -1,0 +1,14 @@
+@mixin active-navitem() {
+    color: white !important;
+    background-color: red !important;
+}
+
+.nav-link {
+    &:hover {
+        @include active-navitem();
+    }
+}
+
+.active {
+    @include active-navitem();
+}
